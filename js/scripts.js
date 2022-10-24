@@ -21,9 +21,9 @@ for (let i = 0;
     else {
         document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + " m) - That is a small pokemon!" + "<br>")
     }
-}*/
 
-/*let pokemonRepository = [
+
+let pokemonRepository = [
     {
       name: "Balbasure",
       height: 0.7,
@@ -39,4 +39,4 @@ for (let i = 0;
       height: 0.4,
       types: ["psychic"]
     }
-  ];          
+  ];
