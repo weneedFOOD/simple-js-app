@@ -1,30 +1,6 @@
-let pokemonList=[
-  {
-    name: "Balbasure", height: 0.7, type: ["grass","poison"]
-  },
-  {
-    name: "Charizard", height: 1.7, type:["fire","flying"]
-  },
-  {
-    name: "Mew", height: 0.4, type: ["psychic"]
-  }
-];
-
-for (let i = 0;
-    i < pokemonList.length; i++) {
-    if(pokemonList[i].height >= 1.7) {
-        document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + " m) - Wow, that is big!" + "<br>")
-    }
-    else if (pokemonList[i].height >= 1 && pokemonList[i].height < 1.5){
-        document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + " m) - That is a medium pokemon!" + "<br>")
-    }
-    else {
-        document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + " m) - That is a small pokemon!" + "<br>")
-    }
-  };
-
-
-let pokemonRepository = [
+let pokemonRepository = (function () {
+  
+    let pokemonList = [
     {
       name: "Balbasure",
       height: 0.7,
@@ -48,10 +24,11 @@ let pokemonRepository = [
 
   
   function add(pokemon) {
-    if (typeof pokemon === 'object' && 'name' in pokemon){
+    if (typeof pokemon === 'object' && 'name' && 'height' && 'types'in pokemon){
     pokemonList.push(pokemon);  
     }
   }
+
 
    function addListItem(pokemon) {
      let pokemonList = document.querySelector('.pokemon-list');
@@ -81,6 +58,21 @@ let pokemonRepository = [
         addListItem: addListItem,
         showDetails: showDetails
       }
+  
+  })()
 
+pokemonRepository.add({ name: 'Balbasure', height: 0.7, type: ['Grass', 'Poison'] });
+pokemonRepository.add({ name: 'Charizard', height: 1.7, type: ['Fire', 'Flying'] });
+pokemonRepository.add({ name: 'Mew', height: 0.4, type: ['psychic'] });
 
-   
+//forEach() function to iterate over the Pokémon in the pokemonList array (external function)
+pokemonRepository.getAll().forEach(printDetails);
+function printDetails (pokemon) {
+	let highlight = '';
+	if (pokemon.height > 1.0) {
+		highlight = " - Wow, that\’s big!";
+	}
+	pokemonRepository.addListItem(pokemon);
+}
+  
+  console.log(pokemonRepository.getAll())
