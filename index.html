@@ -4,12 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <title>Simple JS App</title>
+    <title>Pokédex App</title>
   </head>
   <body>
-    <h1>pokedex</h1>
-    <p>List of some Pokemon stats</p>
-    <ul class="pokemon-list"></ul>
+    <header>
+      <div class="container">
+       <h1 class="main-title">Pokédex</h1>
+       <p>List of some Pokemon stats</p>
+       <ul class="pokemon-list"></ul>
+      </div>
+      <div class="modal-container"></div>
+      <div class="list">
+        <ul class='pokemon-list'></ul>
+      </div>
+    </header>
     <strong>
       <script src="js/promise-polyfill.js"></script>
       <script src="js/fetch-polyfill.js"></script>
