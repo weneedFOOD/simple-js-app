@@ -1,6 +1,6 @@
 :root {
     /* colors */
-    --yellow: #f1d93b;
+    --yellow: #b1b0aa;
     --blue: #3232c2;
 
 
@@ -14,9 +14,9 @@
 
 body {
     background-color: var(--yellow);
-    font-family: 'Bebas Neue', cursive;
-    font-weight: 400;
-    font-size:20px;
+    font-family: 'Bebas Neue',monospace;
+    font-weight: 700;
+    font-size:30px;
     line-height: 1.6;
 }
 
@@ -41,10 +41,10 @@ button {
   background-image: linear-gradient(1deg, #5e5e97, rgb(46, 79, 228) 99%);
   background-size: calc(100% + 20px) calc(100% + 20px);
   border-radius: 100px;
-  border-width: 0;
+  border-width: thick;
   box-shadow: none;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #e1ee39;
   cursor: pointer;
   display: inline-flex;
   font-family: CircularStd,sans-serif;
@@ -74,7 +74,7 @@ button:hover {
 }
 
 button:focus:not(:active) {
-  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+  box-shadow: rgba(241, 25, 9, 0.548) 0 0 0 .125em;
 }
 
 .container {
@@ -113,11 +113,11 @@ button:focus:not(:active) {
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
-  background: #fff;
+  background: #d0d0d0;
   padding: 15px;
   width: 100%;
   max-width: 700px;
-  text-align: left;
+  text-align: center;
 }
 
 .modal-close {
