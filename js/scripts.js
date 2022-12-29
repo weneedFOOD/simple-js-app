@@ -1,7 +1,6 @@
 let pokemonRepository = (function () {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-    let pokemonListElement = document.querySelector('.pokemon-list');
   
   function add(pokemon) {
     if (
@@ -56,7 +55,7 @@ let pokemonRepository = (function () {
       // Now we add the details to the item
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
-      item.types = details.types;
+      item.weight = details.weight;
     }).catch(function (e) {
       console.error(e);
     });
@@ -86,13 +85,14 @@ let pokemonRepository = (function () {
     let pokemonHeight = document.createElement('p');
     pokemonHeight.innerText = "Height: " + pokemon.height;
 
-    let pokemonTypes = document.createElement('p');
-    pokemonTypes.innerText = "Type: " + pokemon.types;
+    let pokemonWeight = document.createElement('p');
+    pokemonWeight.innerText = "Weight: " + pokemon.weight;
+
 
     modal.appendChild(title);
     modal.appendChild(pokemonImage);
     modal.appendChild(pokemonHeight);
-    modal.appendChild(pokemonTypes);
+    modal.appendChild(pokemonWeight);
     modalContainer.appendChild(modal);
 
     modalContainer.addEventListener('click', (e) => {
