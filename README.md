@@ -7,7 +7,7 @@
 
 ## Built in HTML, CSS, JS
 
-### Link: https://github.com/weneedFOOD/simple-js-app.git
+### Link: https://weneedfood.github.io/simple-js-app/
 
 
 A CareerFoundry JavaScript project 
