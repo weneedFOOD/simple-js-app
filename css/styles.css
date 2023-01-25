@@ -89,3 +89,12 @@ a {
   border-color: var(--highlight-color);
   
 }
+
+.modal-title {
+  font-family: impact;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1cm;
+  color: #b72c2c;
+}
