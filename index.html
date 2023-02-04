@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="dist/styles.min.css" />
+  <link rel="stylesheet" type="text/css" href="dist/styles.min.css">
   <title>Pokédex App</title>
   <link rel="shortcut icon" type="image/jpeg" href="img/app-icon.jpeg">
 </head>
@@ -21,19 +20,18 @@
   <div class="pokedex">
     <h1 class="pokemon-header display-4">Pokédex!</h1>
     <div class="container">
-      <img src="img/pokeball.png" alt="logo-header" class="pokeball pic">
+      <img src="img/pokeball.png" alt="pokeball pic" class="logo-header">
       <p>List of some Pokémon stats!</p>
     </div>
     <!--added second class (list-group) into ul for bootstrap-->
     <ul class="pokemon-list list-group"></ul>
   </div>
   <!--modal code for pokemon details-->
-  <div class="modal fade show" id="pokemon-modal" tabindex="-1" role="dialog" aria-labelledby="pokemon-modal"
-    padding-right: 18px; aria-modal="true">
+  <div class="modal fade show" id="pokemon-modal" tabindex="-1" role="dialog" aria-labelledby="pokemon-modal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title"></h2>
+          <h2 class="modal-title" id="pokeModleLable"></h2>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
